@@ -3,10 +3,8 @@ require 'uri'
 require 'sinatra'
 require 'json'
 require 'rest_client'
-require 'active_support'
 require 'geokit'
 require 'data_mapper'
-require 'active_support'
 
 Geokit::default_units = :kms
 
