@@ -34,7 +34,7 @@ end
 
 set :readmill_client_id, "8f92d2cc1a048292df32ed5473c5b2fc"
 set :readmill_client_secret, "917774867dc9981c04d78ad7b016b1e6"
-set :readmill_redirect, "http://127.0.0.1:9393/callback/readmill"
+set :readmill_redirect, "http://readspots.herokuapp.com/callback/readmill"
 
 get '/' do
   erb :index
