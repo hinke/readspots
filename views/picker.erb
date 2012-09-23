@@ -1,0 +1,7 @@
+<ul>
+<% @readings.each do |r| %>
+
+<li><a href="/<%= r['reading']['id']%>"><%= r['reading']['book']['title'] %></a></li>
+
+<% end %>
+</ul>

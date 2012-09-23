@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href='http://fonts.googleapis.com/css?family=Rokkitt' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="static/app.css" type="text/css" media="screen" charset="utf-8">
+
+    <meta charset="utf-8" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    
+    <title>Readspots</title>
+        <!--[if IE]>
+                <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->  
+
+
+</head>
+<body>
+
+<header>
+  <img src="/static/readspots_logo4.png">
+</header>
+
+
+<div id="content">
+
+<div id="slides">
+    <ul>
+    <li>
+      <div class="info" style="white-space:normal; width:80%">
+        <h2><%= @username %> read <%= @author %> <strong><%= @title %></strong> in <%= @periods %> sessions collecting <%= @slides.size %> pictures</h2>
+      </div>
+
+      <img src="<%= @avatar %>">
+    </li>    
+    <li><img src="<%= @cover %>"></li>
+    <li><img src="/static/middle.png"></li>
+        <% @slides.each do |slide| %>
+        <li>
+          <div class="info">
+            <h2><%= "#{slide[:city]}," unless slide[:city].nil? %> <%= slide[:datestamp] %></h2>
+          </div>  
+          <img src="<%= slide[:photo]['photoUrl'] %>" />
+        </li>
+        <% end %>
+    </ul>
+</div>
+</div>
+
+
+  
+</body>
+</html>
